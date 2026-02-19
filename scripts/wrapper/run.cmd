@@ -2,15 +2,6 @@
 
 SETLOCAL DisableDelayedExpansion
 
-IF DEFINED HELM_DEBUG (
-    IF "%HELM_DEBUG%"=="1" (
-        @echo on
-    )
-    IF "%HELM_DEBUG%"=="true" (
-        @echo on
-    )
-)
-
 SET SCRIPT_DIR=%~dp0
 SET SCRIPT_DIR=%SCRIPT_DIR:~0,-1%
 FOR %%F in ("%SCRIPT_DIR%") do SET PLUGIN_DIR=%%~dpF
